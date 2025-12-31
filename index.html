@@ -168,17 +168,47 @@ height: 95vh;   /* earlier: 100vh */
   display: block;
 }
 
-/* Mobile Responsive */
-@media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
+/* ========== Mobile Navbar (No Horizontal Scroll) ========== */
+@media(max-width:900px){
+
+  .nav-links{
+    position:fixed;
+    top:68px;
+    left:0;
+    width:100%;
+    height:100vh;
+
+    background:#050505;
+    border-top:1px solid #2a2a2a;
+
+    flex-direction:column;
+    padding:26px;
+    gap:18px;
+
+    /* hide via transform instead of pushing off-screen */
+    transform:translateX(-100%);
+    transition:.35s ease;
   }
 
-  .hero-right img {
-    margin: 0 auto;
+  .nav-links.show{
+    transform:translateX(0);
+  }
+
+  .nav-links a{
+    font-size:18px;
+    padding:8px 0;
+  }
+
+  .nav-toggle{
+    display:block;
+    font-size:28px;
+    background:none;
+    border:none;
+    color:#ffc12f;
+    cursor:pointer;
   }
 }
+
 
 
 /* ====== Stats Section Responsive Upgrade ====== */
@@ -664,7 +694,7 @@ section:before{
 <div style="display:flex;justify-content:center;align-items:center;">
   <img src="movies.png"
        alt="Landscape Grid"
-       style="width:100%; max-width:1400px; height:auto; object-fit:contain; display:block; margin:0 auto; border-radius:10px;" />
+       style="width:100%; max-width:1400px; height:auto; object-fit:contain; display:block; margin:0 auto;border-radius:10px;" />
 </div>
 
  <!-- 2025 Statement Section — Compact + Cards -->
@@ -1115,7 +1145,7 @@ Our goal is to be the go-to creative partner for brands all under a single roof.
 
 <div style="text-align:center;">
   <img src="infi.png"
-       style="width:50vw; min-width:400px; height:auto;">
+       style="width:50vw; min-width:300px; height:auto;">
 </div>
 
 <!-- FOOTER -->
