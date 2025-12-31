@@ -661,7 +661,11 @@ section:before{
 </section>
 
 <section id="work">
-
+<div style="display:flex;justify-content:center;align-items:center;">
+  <img src="movies.png"
+       alt="Landscape Grid"
+       style="width:100%;max-width:1400px;height:auto;object-fit:contain;display:block;margin:0 auto;border-radius:10px;" />
+</div>
 
  <!-- 2025 Statement Section — Compact + Cards -->
 <div style="
@@ -747,11 +751,7 @@ section:before{
 </div>
 
 <br>
-<div style="display:flex;justify-content:center;align-items:center;">
-  <img src="Landscape.png"
-       alt="Landscape Grid"
-       style="width:100%;max-width:1400px;height:auto;object-fit:contain;display:block;margin:0 auto;border-radius:10px;" />
-</div>
+
 </section>
 
 <section id="about-us">
@@ -984,10 +984,81 @@ Our goal is to be the go-to creative partner for brands all under a single roof.
 </section>
 
 
-<br><br>
-<div style="text-align:center; padding:40px 18px 10px;">
+<br>
+<style>
+/* Wrapper layout */
+.wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:10px;
+  position:relative;
+}
 
-  <h2 style="
+/* Make center circle responsive */
+.center-circle{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:#111;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+  /* Heading */
+  .inv-title{
+    font-size:28px !important;
+    margin-bottom:6px;
+  }
+
+  /* Center Circle Bigger on Mobile */
+  .center-circle{
+    width:260px;
+    height:260px;
+    transform:scale(1.05);
+  }
+
+  /* Orbit spacing adjust if used */
+  #orbit{
+    transform:scale(.9);
+  }
+
+  /* Button — larger & more tappable */
+  .inventory-btn{
+    padding:14px 26px !important;
+    font-size:15px;
+  }
+}
+
+/* Small Phones */
+@media(max-width:480px){
+
+  .inv-title{
+    font-size:24px !important;
+  }
+
+  .center-circle{
+    width:280px;
+    height:280px;
+  }
+
+  .inventory-btn{
+    padding:16px 30px !important;
+    font-size:16px;
+  }
+}
+</style>
+
+
+<div style="text-align:center; padding:34px 14px 6px;">
+  <h2 class="inv-title" style="
     font-size:44px;
     font-weight:900;
     letter-spacing:-.6px;
@@ -1008,16 +1079,17 @@ Our goal is to be the go-to creative partner for brands all under a single roof.
   </div>
 
 </div>
+
+
+<center>
 <a href="https://docs.google.com/spreadsheets/d/1lX2L-XiOhShbejM-GeeaNNOU1tIlT031dBS1oG6RJ8k/edit?usp=sharing"
    target="_blank"
    style="text-decoration:none;">
 
-<center>
-<button style="
+<button class="inventory-btn" style="
   padding:11px 22px;
   border-radius:40px;
   border:none;
-  align-items: center;
   font-weight:800;
   font-family:Poppins,system-ui,Arial;
   cursor:pointer;
@@ -1025,15 +1097,10 @@ Our goal is to be the go-to creative partner for brands all under a single roof.
   background:linear-gradient(90deg,#ffc12f,#ffd86b);
   position:relative;
   overflow:hidden;
-  align-items: center;
-"
-onmouseover="this.children[0].style.transform='translateX(120%)'"
-onmouseout="this.children[0].style.transform='translateX(-120%)'">
-
+">
   Pages Inventory Sheet
 
   <span style="
-    content:'';
     position:absolute;
     inset:0;
     background:linear-gradient(120deg,transparent,#ffffff77,transparent);
@@ -1042,8 +1109,8 @@ onmouseout="this.children[0].style.transform='translateX(-120%)'">
     display:block;
   "></span>
 </button>
-</center>
 </a>
+</center>
 
 
 <div style="text-align:center;">
